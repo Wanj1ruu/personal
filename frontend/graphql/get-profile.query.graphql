@@ -1,0 +1,19 @@
+query GetProfile($args: GetProfileArgs!) {
+	getProfile(args: $args) {
+		name
+		username
+		profilePictureUri
+
+		followerCount
+		followingCount
+
+		isFollowee
+
+		recentPosts {
+			id
+
+			description
+			createdAt
+		}
+	}
+}
